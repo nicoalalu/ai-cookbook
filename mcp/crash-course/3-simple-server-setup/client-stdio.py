@@ -1,15 +1,12 @@
 import asyncio
-import nest_asyncio
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
-
-nest_asyncio.apply()  # Needed to run interactive python
 
 
 async def main():
     # Define server parameters
     server_params = StdioServerParameters(
-        command="python",  # The command to run your server
+        command="py",  # The command to run your server
         args=["server.py"],  # Arguments to the command
     )
 
